@@ -1,5 +1,7 @@
 ---
 import NavBar from "@/components/NavBar.astro";
+
+import "@/styles/main.scss";
 ---
 
 <html lang="es">
@@ -9,29 +11,6 @@ import NavBar from "@/components/NavBar.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
-    <style is:global>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      * {
-        margin: 0;
-      }
-
-      body {
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      input,
-      button,
-      textarea,
-      select {
-        font: inherit;
-      }
-    </style>
   </head>
   <body>
     <NavBar />
