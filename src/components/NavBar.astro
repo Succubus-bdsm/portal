@@ -1,0 +1,54 @@
+---
+import Link from "@/components/Link.astro";
+import Container from "@/components/Container.astro";
+
+const links = [
+  {
+    text: "Inicio",
+    href: "/",
+  },
+  {
+    text: "Blog",
+    href: "https://blog.succubus-bdsm.com",
+  },
+  {
+    text: "Inicio",
+    href: "https://test.succubus-bdsm.com/",
+  },
+  {
+    text: "Sobre Nosotros",
+    href: "/sobre-nosotros",
+  },
+  {
+    text: "Contáctanos",
+    href: "/contactanos",
+  },
+];
+---
+
+<nav>
+  <Container class="nav__container">
+    <img src="/images/logo.svg" alt="Logo" class="nav__img" />
+
+    <div class="nav__links">
+      {links.map((link) => <Link href={link.href}>{link.text}</Link>)}
+    </div>
+  </Container>
+</nav>
+
+<style>
+  .nav__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__img {
+    height: 100px;
+  }
+
+  .nav__links {
+    display: flex;
+    margin-left: auto;
+    gap: 2em;
+  }
+</style>
