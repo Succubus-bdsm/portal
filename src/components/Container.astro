@@ -1,7 +1,9 @@
 ---
 import "@jogarcia/mgrid/container.scss";
+
+const { class: className, ...rest } = Astro.props;
 ---
 
-<div class="container">
+<div class="container" class:list={className} {...rest}>
   <slot />
 </div>
