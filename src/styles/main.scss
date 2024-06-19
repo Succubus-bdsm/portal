@@ -24,6 +24,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   font-family: var(--font-serif);
   font-size: 4.6rem;
