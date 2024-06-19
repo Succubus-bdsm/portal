@@ -30,9 +30,15 @@ const links = [
   <Container class="nav__container">
     <img src="/images/logo.svg" alt="Logo" class="nav__img" />
 
-    <div class="nav__links">
-      {links.map((link) => <Link href={link.href}>{link.text}</Link>)}
-    </div>
+    <ul class="nav__links">
+      {
+        links.map((link) => (
+          <li>
+            <Link href={link.href}>{link.text}</Link>
+          </li>
+        ))
+      }
+    </ul>
   </Container>
 </nav>
 
@@ -50,5 +56,6 @@ const links = [
     display: flex;
     margin-left: auto;
     gap: 2em;
+    list-style-type: none;
   }
 </style>
