@@ -34,7 +34,9 @@ const links = [
       {
         links.map((link) => (
           <li>
-            <Link href={link.href}>{link.text}</Link>
+            <Link href={link.href} class="nav__link">
+              {link.text}
+            </Link>
           </li>
         ))
       }
@@ -46,6 +48,7 @@ const links = [
   .nav__container {
     display: flex;
     align-items: center;
+    color: var(--color-gray-light-1);
   }
 
   .nav__img {
@@ -57,5 +60,9 @@ const links = [
     margin-left: auto;
     gap: 2em;
     list-style-type: none;
+  }
+
+  .nav__link {
+    color: var(--color-gray-light-1);
   }
 </style>
