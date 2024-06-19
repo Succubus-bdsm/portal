@@ -1,4 +1,5 @@
 @use "variables";
+@use "fonts";
 
 *,
 *::before,
@@ -11,8 +12,18 @@
 }
 
 body {
-  line-height: 1.5;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: var(--color-gray-light-1);
+  font-family: var(--font-sans-serif);
+  font-size: 1.5rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 input,
@@ -20,4 +31,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: 4.6rem;
+  letter-spacing: -0.5px;
 }
