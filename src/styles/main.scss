@@ -1,4 +1,18 @@
 @use "reset";
+
+@use "node_modules/@jogarcia/mgrid/margin.scss" with (
+  $base: 1,
+  $range: 10,
+  $unit: rem
+);
+@use "node_modules/@jogarcia/mgrid/padding.scss" with (
+  $base: 1,
+  $range: 10,
+  $unit: rem
+);
+
+@use "node_modules/@jogarcia/mgrid/gap.scss";
+
 @use "variables";
 @use "fonts";
 
