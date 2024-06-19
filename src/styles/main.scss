@@ -24,6 +24,10 @@ html {
   );
 }
 
+ul:not([class]) li + li {
+  margin-top: 0.6em;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
