@@ -1,15 +1,6 @@
+@use "reset";
 @use "variables";
 @use "fonts";
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
 
 body {
   min-height: 100vh;
@@ -24,13 +15,6 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 
 h1 {
