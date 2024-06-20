@@ -2,6 +2,7 @@
 import Default from "@/layouts/Default.astro";
 import Container from "@/components/Container.astro";
 import Button from "@/components/Button.astro";
+import BrandTitle from "@/components/BrandTitle.astro";
 
 import Description from "@/components/home/Description.astro";
 ---
@@ -9,11 +10,8 @@ import Description from "@/components/home/Description.astro";
 <Default>
   <Container>
     <header class="hero">
-      <h1 class="brand-header hero__header">
-        Suc
-        <span class="brand-header__intermediary"> c </span>
-        ubus
-      </h1>
+      <BrandTitle class="hero__header" />
+
       <h2>
         <i> Placeres ocultos </i>
       </h2>
