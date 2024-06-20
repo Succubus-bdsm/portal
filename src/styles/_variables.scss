@@ -1,3 +1,9 @@
+$xlarge: 1680px;
+$large: 1280px;
+$medium: 980px;
+$small: 740px;
+$xsmall: 480px;
+
 :root {
   /* Colors */
   --color-primary: #3eb0ef;
@@ -23,6 +29,13 @@
   --font-normal: 400;
   --font-bold: 700;
   --font-heavy: 800;
+
+  /* Breakpoints */
+  --xlarge: $xlarge;
+  --large: $large;
+  --medium: $medium;
+  --small: $small;
+  --xsmall: $xsmall;
 
   /* Sizes */
   --height: 4rem;
