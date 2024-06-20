@@ -1,5 +1,6 @@
 ---
 import Container from "./Container.astro";
+import BrandTitle from "./BrandTitle.astro";
 
 const links = [
   { text: "Inicio", href: "https://www.succubus-bdsm.com" },
@@ -53,11 +54,7 @@ const socialIcons = [
         width="120px"
         height="120px"
       />
-      <h2 class="brand-header footer__header-title">
-        <span> Suc </span>
-        <span class="brand-header__intermediary"> c </span>
-        <span> ubus </span>
-      </h2>
+      <BrandTitle tag="h2" class="footer__header-title" />
     </div>
 
     <div class="footer__links my-7">
