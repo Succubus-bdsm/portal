@@ -1,0 +1,66 @@
+---
+import { Picture } from "astro:assets";
+
+import BrandTitle from "@/components/BrandTitle.astro";
+
+import FullLogoWithBackground from "@/assets/full-logo-with-background.png";
+
+import "@/styles/_variables.scss";
+---
+
+<section class="gap-30">
+  <Picture
+    src={FullLogoWithBackground}
+    widths={[1280, FullLogoWithBackground.width]}
+    formats={["avif", "webp"]}
+    class="image"
+    alt="A description of my image."
+  />
+  <div class="gap-5">
+    <h2>
+      Bienvenido a
+      <BrandTitle tag="span" />
+    </h2>
+    <p>
+      Somos un proyecto especializado en la divulgación de información sobre el
+      BDSM, haciendo énfasis en la comunidad vernácula. Nuestro mayor reto
+      consiste en sacar a la luz información veraz y confiable dentro de este
+      tema tan lleno de tabúes y falsas informaciones.
+    </p>
+  </div>
+</section>
+
+<style lang="scss">
+  @use "../../styles/variables";
+
+  section {
+    align-items: center;
+    max-width: 940px;
+    margin: auto;
+  }
+
+  @media (min-width: variables.$small) {
+    section {
+      display: flex;
+    }
+  }
+
+  img {
+    height: auto;
+    border-radius: 50%;
+    max-width: 300px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    font-weight: normal;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+</style>
