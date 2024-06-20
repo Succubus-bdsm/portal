@@ -1,10 +1,10 @@
 ---
-const { tag = "h1" } = Astro.props;
+const { tag = "h1", class: className } = Astro.props;
 
 const Parent = tag;
 ---
 
-<Parent class="brand-header">
+<Parent class="brand-header" class:list={className}>
   Suc
   <span class="brand-header__intermediary"> c </span>
   ubus
