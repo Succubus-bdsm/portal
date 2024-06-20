@@ -1,0 +1,24 @@
+---
+const { tag = "h1" } = Astro.props;
+
+const Parent = tag;
+---
+
+<Parent class="brand-header">
+  Suc
+  <span class="brand-header__intermediary"> c </span>
+  ubus
+</Parent>
+
+<style>
+  .brand-header {
+    display: flex;
+    font-family: var(--font-serif);
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .brand-header__intermediary {
+    color: var(--color-accent);
+  }
+</style>
