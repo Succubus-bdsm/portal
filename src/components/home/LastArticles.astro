@@ -9,7 +9,7 @@ import FullLogoWithBackground from "@/assets/full-logo-with-background.png";
 
   const key = "219991ba38c3a69c428f2db98f";
 
-  const blogUrl = `https://blog.succubus-bdsm.com/ghost/api/content/posts/?key=${key}&limit=3`;
+  const blogUrl = `https://blog.succubus-bdsm.com/ghost/api/content/posts/?key=${key}&limit=3&include=tags`;
 
   document.addEventListener("alpine:init", () => {
     Alpine.data("cardscontainer", () => ({
@@ -20,7 +20,6 @@ import FullLogoWithBackground from "@/assets/full-logo-with-background.png";
       async loadData() {
         const res = await fetch(blogUrl);
         const data = await res.json();
-        console.log(data.posts);
         this.articles = data.posts;
       },
     }));
@@ -37,7 +36,8 @@ import FullLogoWithBackground from "@/assets/full-logo-with-background.png";
           <img :src="article.feature_image" alt="" class="card--geo__image" />
         </div>
         <div class="card--geo__tag">
-          <span class="post-card-primary-tag" x-text="article"></span>
+          <span class="post-card-primary-tag" x-text="article.tags[0].name">
+          </span>
         </div>
         <div class="card--geo__body">
           <h3 class="card__title mb-1" x-text="article.title">Title</h3>
