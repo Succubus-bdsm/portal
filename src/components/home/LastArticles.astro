@@ -1,0 +1,77 @@
+---
+import { Picture } from "astro:assets";
+
+import FullLogoWithBackground from "@/assets/full-logo-with-background.png";
+---
+
+<script>
+  import Alpine from "alpinejs";
+
+  const key = "219991ba38c3a69c428f2db98f";
+
+  const blogUrl = `https://blog.succubus-bdsm.com/ghost/api/content/posts/?key=${key}&limit=3`;
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("cardscontainer", () => ({
+      articles: [],
+      init() {
+        this.loadData();
+      },
+      async loadData() {
+        const res = await fetch(blogUrl);
+        const data = await res.json();
+        console.log(data.posts);
+        this.articles = data.posts;
+      },
+    }));
+  });
+</script>
+
+<section class="py-7">
+  <h2>Últimos Artículos</h2>
+  <div class="articles-container gap-8" x-data="cardscontainer">
+    <template x-for="article in articles">
+      <div class="card card--geo mt-5">
+        <div class="card--geo__image-wrapper">
+          <div class="skeleton-loader card--geo__image"></div>
+          <img :src="article.feature_image" alt="" class="card--geo__image" />
+        </div>
+        <div class="card--geo__tag">
+          <span class="post-card-primary-tag" x-text="article"></span>
+        </div>
+        <div class="card--geo__body">
+          <h3 class="card__title mb-1" x-text="article.title">Title</h3>
+          <p x-text="article.custom_excerpt"></p>
+          <strong>Leer más</strong>
+        </div>
+      </div>
+    </template>
+  </div>
+</section>
+
+<style lang="scss">
+  @use "../../styles/variables";
+  @use "../../styles/card";
+
+  h2 {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    font-weight: normal;
+  }
+
+  .card__title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .articles-container {
+  }
+
+  @media (min-width: variables.$medium) {
+    .articles-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
