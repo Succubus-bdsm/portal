@@ -1,0 +1,64 @@
+---
+import Button from "@/components/Button.astro";
+
+import "@/styles/_variables.scss";
+---
+
+<section class="py-7 gap-10">
+  <div class="img-container">
+    <img src="/images/dominante-sumiso-logo.svg" alt="" />
+  </div>
+  <div class="content-container gap-5">
+    <h2>Encuesta</h2>
+    <p>
+      Descubre tu personalidad BDSM. ¿Te interesa saber cuales arquetipos BDSM
+      te hacen más justicia? Haz la encuesta para averiguarlo.
+    </p>
+    <Button
+      class="button mr-auto gap-2"
+      openNewPage={true}
+      href="https://test.succubus-bdsm.com/"
+    >
+      <span> Hacer encuesta </span>
+    </Button>
+  </div>
+</section>
+
+<style lang="scss">
+  @use "../../styles/variables";
+
+  section {
+    align-items: center;
+    max-width: 940px;
+    margin: auto;
+  }
+
+  @media (min-width: variables.$small) {
+    section {
+      display: flex;
+    }
+  }
+
+  .section__img {
+    height: auto;
+    width: 100%;
+  }
+
+  .content-container,
+  .img-container {
+    flex-basis: 50%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    font-weight: normal;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+</style>
