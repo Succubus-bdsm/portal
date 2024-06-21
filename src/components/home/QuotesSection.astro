@@ -34,34 +34,62 @@ import QuoteImage from "@/assets/quote-image.png";
   <span></span>
 </section>
 
-<style>
+<style lang="scss">
+  @use "../../styles/variables";
+
   section {
     max-width: 1200px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    align-items: center;
+  }
+
+  @media (min-width: variables.$small) {
+    section {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .quote-image {
     height: auto;
     width: 100%;
-    padding: 0 1em;
+    padding: 2em 9em;
+  }
+
+  @media (min-width: variables.$small) {
+    .quote-image {
+      height: auto;
+      width: 100%;
+      padding: 2em 14em;
+    }
+  }
+
+  @media (min-width: variables.$small) {
+    .quote-image {
+      padding: 0 1em;
+    }
   }
 
   blockquote {
     font-size: 1.2rem;
     line-height: 1.7;
+    padding: 0 3em;
     display: flex;
     flex-direction: column;
-    flex-basis: 80%;
-    padding: 0 3em;
   }
 
-  span {
-    flex-basis: 10%;
-    width: 100%;
+  @media (min-width: variables.$small) {
+    blockquote {
+      flex-basis: 80%;
+    }
+  }
+
+  @media (min-width: variables.$small) {
+    span {
+      flex-basis: 10%;
+      width: 100%;
+    }
   }
 
   a {
