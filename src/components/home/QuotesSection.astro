@@ -1,0 +1,70 @@
+---
+import { Picture } from "astro:assets";
+
+import QuoteImage from "@/assets/quote-image.png";
+---
+
+<section class="py-7">
+  <span>
+    <Picture
+      src={QuoteImage}
+      widths={[1280, QuoteImage.width]}
+      formats={["avif", "webp"]}
+      class="quote-image"
+      alt="A description of my image."
+    />
+  </span>
+  <blockquote class="gap-5">
+    <p>
+      "Aprender la práctica BDSM es como aprender a tener sexo desde el
+      principio (...) El resto del mundo no tiene ni idea hasta que punto es
+      cariñoso e íntimo este acto"
+    </p>
+    <p>"Nosotros, también, estamos en todas partes"</p>
+    <footer>
+      <cite>
+        <a
+          href="https://www.infolibro.es/libro-bdsm-introduccion-a-las-tecnicas-y-su-significado"
+        >
+          Jay Wiseman, BDSM. Introducción a las técnicas y su significado
+        </a>
+      </cite>
+    </footer>
+  </blockquote>
+  <span></span>
+</section>
+
+<style>
+  section {
+    max-width: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .quote-image {
+    height: auto;
+    width: 100%;
+    padding: 0 1em;
+  }
+
+  blockquote {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    padding: 0 3em;
+  }
+
+  span {
+    flex-basis: 10%;
+    width: 100%;
+  }
+
+  a {
+    color: white;
+  }
+</style>
