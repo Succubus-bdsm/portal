@@ -45,7 +45,6 @@ import "@/styles/_variables.scss";
 
   section {
     align-items: center;
-    max-width: 940px;
     margin: auto;
   }
 
@@ -60,9 +59,12 @@ import "@/styles/_variables.scss";
     width: 100%;
   }
 
-  .content-container,
+  .content-container {
+    flex-basis: 35%;
+  }
+
   .img-container {
-    flex-basis: 50%;
+    flex-basis: 65%;
   }
 
   .button {
