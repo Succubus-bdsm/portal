@@ -15,6 +15,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/alpinejs@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@astrojs/alpinejs@npm:0.4.0"
+  peerDependencies:
+    "@types/alpinejs": ^3.0.0
+    alpinejs: ^3.0.0
+  checksum: e1b32282871dcd91f4612950ef92f737bdbb16f9a191dd88a64ca03810e87abb709d21528e2cc2fb96ac0affb742485e485be4399f0415ebc29687e8b5425f38
+  languageName: node
+  linkType: hard
+
 "@astrojs/compiler@npm:^1.5.5":
   version: 1.8.2
   resolution: "@astrojs/compiler@npm:1.8.2"
@@ -1021,6 +1031,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/alpinejs@npm:^3.13.10":
+  version: 3.13.10
+  resolution: "@types/alpinejs@npm:3.13.10"
+  checksum: faf51008aea6623dbc80e593a6c6a30ad8dd7ff157a90550c251dc53d2e82f0a224bdbe65ac496b7549aa52bb7b915f6456ce6efa0529bd77d54be97b638a506
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.20.5":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
@@ -1186,6 +1203,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/reactivity@npm:~3.1.1":
+  version: 3.1.5
+  resolution: "@vue/reactivity@npm:3.1.5"
+  dependencies:
+    "@vue/shared": 3.1.5
+  checksum: b7dfcaa30aacd658502ce9373d4343d3607486796fbaae28d4ac4ab955cec766c8c6a34cb422965b21154b6319e467c54259cd6da2d9b2687501cd9e36f4197c
+  languageName: node
+  linkType: hard
+
+"@vue/shared@npm:3.1.5":
+  version: 3.1.5
+  resolution: "@vue/shared@npm:3.1.5"
+  checksum: a34b942e1aeed5d2b0fe887d0804061d2e799ef9a0d641aaae368c6fa9e2bf311e415f02883f26963bd35d90cac165433cfe74360f7ee88304fccaa144422d83
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^2.0.0":
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
@@ -1239,6 +1272,15 @@ __metadata:
     json-schema-traverse: ^0.4.1
     uri-js: ^4.2.2
   checksum: 874972efe5c4202ab0a68379481fbd3d1b5d0a7bd6d3cc21d40d3536ebff3352a2a1fabb632d4fd2cc7fe4cbdcd5ed6782084c9bbf7f32a1536d18f9da5007d4
+  languageName: node
+  linkType: hard
+
+"alpinejs@npm:^3.14.1":
+  version: 3.14.1
+  resolution: "alpinejs@npm:3.14.1"
+  dependencies:
+    "@vue/reactivity": ~3.1.1
+  checksum: 805b23db7f00ac38e2df66fe1031ab2f6b4151878a6e93b7b05bbd38d3c41d414e04abe5e7207102704df409fe081907487f3239bac5190baa907167110d4939
   languageName: node
   linkType: hard
 
@@ -4272,7 +4314,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portal@workspace:."
   dependencies:
+    "@astrojs/alpinejs": ^0.4.0
     "@jogarcia/mgrid": ^1.0.2
+    "@types/alpinejs": ^3.13.10
+    alpinejs: ^3.14.1
     astro: ^4.10.3
     eslint: ^9.5.0
     eslint-plugin-astro: ^1.2.2

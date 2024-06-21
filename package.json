@@ -12,7 +12,10 @@
 		"lint": "eslint ."
 	},
 	"dependencies": {
+		"@astrojs/alpinejs": "^0.4.0",
 		"@jogarcia/mgrid": "^1.0.2",
+		"@types/alpinejs": "^3.13.10",
+		"alpinejs": "^3.14.1",
 		"astro": "^4.10.3"
 	},
 	"devDependencies": {
