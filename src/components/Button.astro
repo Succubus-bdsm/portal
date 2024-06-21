@@ -1,10 +1,16 @@
 ---
-const { href, class: className, ...rest } = Astro.props;
+const { href, openNewPage, class: className, ...rest } = Astro.props;
 
 const Parent = href ? "a" : "button";
 ---
 
-<Parent class="parent" class:list={className} href={href} {...rest}>
+<Parent
+  class="parent"
+  class:list={className}
+  href={href}
+  target={openNewPage ? "_blank" : "_self"}
+  {...rest}
+>
   <slot />
 </Parent>
 
