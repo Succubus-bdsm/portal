@@ -33,6 +33,27 @@ import Poll from "@/components/home/Poll.astro";
 </Default>
 
 <style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 7em 0;
+    gap: 5em;
+    position: relative;
+  }
+
+  .hero__header {
+    font-size: 7rem;
+    letter-spacing: 8px;
+  }
+
+  @media (min-width: 700px) {
+    .hero__header {
+      font-size: 10rem;
+    }
+  }
+
   h2 > i {
     font-weight: normal;
   }
