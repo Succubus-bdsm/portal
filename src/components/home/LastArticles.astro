@@ -29,25 +29,27 @@
   <div class="articles-container gap-8" x-data="cardscontainer">
     <template x-for="article in articles">
       <article class="card card--geo mt-5">
-        <div class="card--geo__image-wrapper">
-          <div class="skeleton-loader card--geo__image"></div>
-          <img
-            :src="article.feature_image"
-            alt=""
-            class="card--geo__image"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        <div class="card--geo__tag">
-          <span class="post-card-primary-tag" x-text="article.tags[0].name">
-          </span>
-        </div>
-        <div class="card--geo__body">
-          <h3 class="card__title mb-1" x-text="article.title">Title</h3>
-          <p x-text="article.custom_excerpt"></p>
-          <strong>Leer más</strong>
-        </div>
+        <a :href="article.url" target="_blank">
+          <div class="card--geo__image-wrapper">
+            <div class="skeleton-loader card--geo__image"></div>
+            <img
+              :src="article.feature_image"
+              alt=""
+              class="card--geo__image"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="card--geo__tag">
+            <span class="post-card-primary-tag" x-text="article.tags[0].name">
+            </span>
+          </div>
+          <div class="card--geo__body">
+            <h3 class="card__title mb-1" x-text="article.title">Title</h3>
+            <p x-text="article.custom_excerpt"></p>
+            <strong>Leer más</strong>
+          </div>
+        </a>
       </article>
     </template>
   </div>
