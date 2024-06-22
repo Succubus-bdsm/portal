@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 import Button from "@/components/Button.astro";
 
 import "@/styles/_variables.scss";
@@ -6,7 +8,13 @@ import "@/styles/_variables.scss";
 
 <section class="pb-7 gap-20">
   <div class="img-container">
-    <img src="/images/dominante-sumiso-logo.svg" alt="" />
+    <Image
+      src="/images/dominante-sumiso-logo.svg"
+      alt="Logo que representa la relación sumiso/dominante"
+      width={399.2}
+      height={565.05}
+      class="section__img"
+    />
   </div>
   <div class="content-container gap-5">
     <h2>Encuesta</h2>
