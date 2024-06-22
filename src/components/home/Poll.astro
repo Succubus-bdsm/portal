@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import Button from "@/components/Button.astro";
 ---
 
-<section class="pb-7 gap-20">
+<section class="pb-7">
   <div class="img-container">
     <Image
       src="/images/dominante-sumiso-logo.svg"
@@ -37,11 +37,14 @@ import Button from "@/components/Button.astro";
     align-items: center;
     max-width: 940px;
     margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   @media (min-width: scssVariables.$small) {
     section {
-      display: flex;
+      flex-direction: row;
+      gap: 5em;
     }
   }
 
