@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"@astrojs/alpinejs": "^0.4.0",
+		"@astrojs/sitemap": "^3.1.6",
 		"@jogarcia/mgrid": "^1.0.2",
 		"@types/alpinejs": "^3.13.10",
 		"alpinejs": "^3.14.1",
