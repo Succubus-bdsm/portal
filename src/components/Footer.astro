@@ -102,7 +102,12 @@ const socialIcons = [
                 class:list={icon.class}
                 href={icon.href}
               >
-                <img alt={icon.alt} src={icon.src} />
+                <img
+                  alt={icon.alt}
+                  src={icon.src}
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
             ))
           }
