@@ -54,7 +54,7 @@
 </section>
 
 <style lang="scss">
-  @use "../../styles/variables";
+  @use "../../styles/scssVariables";
   @use "../../styles/card";
 
   h2 {
@@ -80,7 +80,7 @@
   .articles-container {
   }
 
-  @media (min-width: variables.$medium) {
+  @media (min-width: scssVariables.$medium) {
     .articles-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
