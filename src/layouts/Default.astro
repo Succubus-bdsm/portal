@@ -4,8 +4,9 @@ import Footer from "@/components/Footer.astro";
 
 import "@/styles/main.scss";
 
+const { title = "Inicio - Succubus" } = Astro.props;
+
 const metaValues = {
-  title: "Inicio - Succubus",
   description:
     "Nos especializamos en la divulgación de información sobre el BDSM, haciendo énfasis en la comunidad vernácula.",
   canonicalUrl: "https://www.succubus-bdsm.com/",
@@ -26,7 +27,7 @@ const metaValues = {
 
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={metaValues.title} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={metaValues.description} />
     <meta property="og:url" content={metaValues.canonicalUrl} />
     <meta property="og:site_name" content="Succubus" />
@@ -35,7 +36,7 @@ const metaValues = {
       content="https://www.succubus-bdsm.com/logo-full.png"
     />
 
-    <title>{metaValues.title}</title>
+    <title>{title}</title>
   </head>
   <body>
     <NavBar />
