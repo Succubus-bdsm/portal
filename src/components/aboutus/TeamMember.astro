@@ -5,6 +5,8 @@ const { teamMember } = Astro.props;
 ---
 
 <div class="team__member gap-4">
+  <Image src={teamMember.img.src} alt={teamMember.img.alt} class="img" />
+
   <h3>{teamMember.name}</h3>
   <h4>{teamMember.charge}</h4>
   <i>{teamMember.bio}</i>
@@ -20,6 +22,7 @@ const { teamMember } = Astro.props;
 <style>
   .team__member {
     display: flex;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -31,5 +34,10 @@ const { teamMember } = Astro.props;
   .socials {
     display: flex;
     justify-content: center;
+  }
+
+  .img {
+    width: 40%;
+    height: auto;
   }
 </style>

@@ -12,6 +12,9 @@ import TeamMember from "@/components/aboutus/TeamMember.astro";
 
 import InstagramLogo from "@/assets/instagram-logo.png";
 import LinkedInLogo from "@/assets/linkedin-logo.png";
+import Gag from "@/assets/mordaza.png";
+import Handcuffs from "@/assets/esposas.png";
+import Plug from "@/assets/plug-con-cola.png";
 
 const optimizedSuccubusPapers = await getImage({
   src: succubusPapers,
@@ -22,6 +25,10 @@ const teamMembers = [
   {
     name: "Niguel Cruz Serafín",
     charge: "CO-Fundador/CEO",
+    img: {
+      src: Gag,
+      alt: "Caricatura de mordaza de cuero con bola roja.",
+    },
     bio: "Fotógrafo , friki y amante del arte… Un poco loco también, lo admito… ",
     socials: [
       {
@@ -44,6 +51,7 @@ const teamMembers = [
   {
     name: "Esther López Alcaráz",
     charge: "CO-Fundadora/CDO",
+    img: { src: Plug, alt: "Caricatura de tapón anal  con cola de zorro." },
     bio: "Graduada de Historia del Arte, diseñadora amateur  y  community manager.",
     socials: [
       {
@@ -61,6 +69,7 @@ const teamMembers = [
   {
     name: "José Carlos García",
     charge: "CO-Fundador/CTO",
+    img: { src: Handcuffs, alt: "Caricatura de esposas de juego sexual." },
     bio: "Ingeniero de software especializado en el desarrollo web.",
     socials: [
       {
