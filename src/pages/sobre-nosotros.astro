@@ -7,6 +7,8 @@ import Stickers from "@/assets/pegatinas-logo-blanco-y-negro.png";
 import Default from "@/layouts/Default.astro";
 import Container from "@/components/Container.astro";
 
+import TeamMember from "@/components/aboutus/TeamMember.astro";
+
 const optimizedSuccubusPapers = await getImage({
   src: succubusPapers,
   format: "webp",
@@ -87,11 +89,7 @@ const teamMembers = [
       <div class="team__members gap-20 mt-4">
         {
           teamMembers.map((teamMember) => (
-            <div class="team__member gap-4">
-              <h3>{teamMember.name}</h3>
-              <h4>{teamMember.charge}</h4>
-              <i>{teamMember.bio}</i>
-            </div>
+            <TeamMember teamMember={teamMember} />
           ))
         }
       </div>
@@ -190,15 +188,5 @@ const teamMembers = [
       display: flex;
       flex-direction: row;
     }
-  }
-
-  .team__member {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .team__member > h4 {
-    font-weight: normal;
-    color: var(--color-accent);
   }
 </style>

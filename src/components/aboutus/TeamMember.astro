@@ -1,0 +1,21 @@
+---
+const { teamMember } = Astro.props;
+---
+
+<div class="team__member gap-4">
+  <h3>{teamMember.name}</h3>
+  <h4>{teamMember.charge}</h4>
+  <i>{teamMember.bio}</i>
+</div>
+
+<style>
+  .team__member {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team__member > h4 {
+    font-weight: normal;
+    color: var(--color-accent);
+  }
+</style>
