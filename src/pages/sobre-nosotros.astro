@@ -153,11 +153,16 @@ const teamMembers = [
     text-transform: uppercase;
   }
 
+  .mission {
+    margin-bottom: 6em;
+  }
+
   @media (min-width: scssVariables.$small) {
     .mission {
       display: flex;
       align-items: center;
       flex-direction: row;
+      margin-bottom: 0em;
     }
   }
 
@@ -175,12 +180,23 @@ const teamMembers = [
   }
 
   .team {
-    text-align: center;
+    text-align: unset;
     max-width: 1200px;
   }
 
+  @media (min-width: scssVariables.$small) {
+    .team {
+      text-align: center;
+    }
+  }
+
   .team__members {
-    display: flex;
+  }
+
+  @media (min-width: scssVariables.$small) {
+    .team__members {
+      display: flex;
+    }
   }
 
   .team__member {
