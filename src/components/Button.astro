@@ -1,12 +1,12 @@
 ---
-const { href, openNewPage, class: className, ...rest } = Astro.props;
+const { href, openNewPage, icon, class: className, ...rest } = Astro.props;
 
 const Parent = href ? "a" : "button";
 ---
 
 <Parent
   class="parent"
-  class:list={className}
+  class:list={[icon ? "parent__icon" : "", className]}
   href={href}
   target={openNewPage ? "_blank" : "_self"}
   {...rest}
@@ -21,5 +21,11 @@ const Parent = href ? "a" : "button";
     padding: 10px 30px;
     color: var(--gray-light-1);
     text-decoration: none;
+  }
+
+  .parent__icon {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
   }
 </style>
