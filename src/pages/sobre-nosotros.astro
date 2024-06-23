@@ -5,9 +5,13 @@ import succubusPapers from "@/assets/papeleria.jpg";
 import Stickers from "@/assets/pegatinas-logo-blanco-y-negro.png";
 
 import Default from "@/layouts/Default.astro";
+
 import Container from "@/components/Container.astro";
 
 import TeamMember from "@/components/aboutus/TeamMember.astro";
+
+import InstagramLogo from "@/assets/instagram-logo.png";
+import LinkedInLogo from "@/assets/linkedin-logo.png";
 
 const optimizedSuccubusPapers = await getImage({
   src: succubusPapers,
@@ -21,8 +25,19 @@ const teamMembers = [
     bio: "Fotógrafo , friki y amante del arte… Un poco loco también, lo admito… ",
     socials: [
       {
-        icon: "",
-        href: "",
+        src: "/images/facebook-logo.svg",
+        href: "https://www.facebook.com/Vampicerdito",
+        alt: "Facebook logo",
+      },
+      {
+        src: "/images/x-logo.svg",
+        href: "https://twitter.com/Vampicerdo",
+        alt: "X icon",
+      },
+      {
+        src: InstagramLogo,
+        href: "https://www.instagram.com/vampicerdito_oficial/",
+        alt: "Instagram Logo",
       },
     ],
   },
@@ -32,8 +47,14 @@ const teamMembers = [
     bio: "Graduada de Historia del Arte, diseñadora amateur  y  community manager.",
     socials: [
       {
-        icon: "",
-        href: "",
+        src: "/images/facebook-logo.svg",
+        href: "https://www.facebook.com/Vampicerdito",
+        alt: "Facebook logo",
+      },
+      {
+        src: InstagramLogo,
+        href: "https://www.instagram.com/vampicerdito_oficial/",
+        alt: "Instagram Logo",
       },
     ],
   },
@@ -43,8 +64,14 @@ const teamMembers = [
     bio: "Ingeniero de software especializado en el desarrollo web.",
     socials: [
       {
-        icon: "",
-        href: "",
+        src: LinkedInLogo,
+        href: "https://www.linkedin.com/in/jose-garcia-888941180/",
+        alt: "LinkedIn logo",
+      },
+      {
+        src: InstagramLogo,
+        href: "https://www.instagram.com/vampicerdito_oficial/",
+        alt: "Instagram Logo",
       },
     ],
   },

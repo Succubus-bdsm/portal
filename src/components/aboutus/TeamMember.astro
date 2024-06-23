@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const { teamMember } = Astro.props;
 ---
 
@@ -6,6 +8,13 @@ const { teamMember } = Astro.props;
   <h3>{teamMember.name}</h3>
   <h4>{teamMember.charge}</h4>
   <i>{teamMember.bio}</i>
+  <div class="socials gap-4">
+    {
+      teamMember.socials.map((social) => (
+        <Image src={social.src} alt={social.alt} width={31.2} height={31.2} />
+      ))
+    }
+  </div>
 </div>
 
 <style>
@@ -17,5 +26,10 @@ const { teamMember } = Astro.props;
   .team__member > h4 {
     font-weight: normal;
     color: var(--color-accent);
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
   }
 </style>
