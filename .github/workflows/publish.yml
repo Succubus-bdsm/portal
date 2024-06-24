@@ -9,6 +9,8 @@ env:
   PUBLIC_TARGET_EMAIL: ${{ secrets.PUBLIC_TARGET_EMAIL }}
   PUBLIC_SERVICE_MAILER_URL: ${{ secrets.PUBLIC_SERVICE_MAILER_URL}}
 
+permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
