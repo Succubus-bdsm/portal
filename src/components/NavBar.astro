@@ -1,6 +1,8 @@
 ---
 import Link from "@/components/Link.astro";
 import Container from "@/components/Container.astro";
+import Button from "./Button.astro";
+import NavBarSmall from "./NavBarSmall.astro";
 
 const links = [
   {
@@ -18,13 +20,37 @@ const links = [
 ];
 ---
 
-<nav>
+<script>
+  import Alpine from "alpinejs";
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("nav", () => ({
+      isSmAndDown: true,
+      init() {
+        const update = () => {
+          const width = window.innerWidth;
+          this.isSmAndDown = width < 768;
+        };
+
+        const isSmAndDownListener = window.matchMedia("(max-width: 768px)");
+        isSmAndDownListener.addEventListener("change", update);
+        update();
+      },
+    }));
+  });
+</script>
+
+<nav x-data="nav">
   <Container class="nav__container">
     <a href="/">
       <img src="/images/logo.svg" alt="Logo" class="nav__img" />
     </a>
 
-    <ul class="nav__links">
+    <div x-show="isSmAndDown" class="ml-auto">
+      <NavBarSmall links={links} />
+    </div>
+
+    <ul class="nav__links ml-auto" id="nav__links" x-show="!isSmAndDown">
       {
         links.map((link) => (
           <li>
@@ -53,7 +79,6 @@ const links = [
 
   .nav__links {
     display: flex;
-    margin-left: auto;
     gap: 2em;
     list-style-type: none;
   }
