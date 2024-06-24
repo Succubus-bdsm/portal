@@ -51,15 +51,23 @@ import Poll from "@/components/home/Poll.astro";
 
   .hero::before {
     content: "";
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     background: radial-gradient(
       circle,
       rgba(36, 30, 70, 0.9) 0,
       rgba(36, 30, 70, 0) 70%
     );
     position: absolute;
-    top: calc(50% - 400px);
+    top: calc(50% - 350px);
+  }
+
+  @media (min-width: scssVariables.$small) {
+    .hero::before {
+      height: 500px;
+      width: 500px;
+      top: calc(50% - 400px);
+    }
   }
 
   .hero__header {
