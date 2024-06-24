@@ -16,6 +16,7 @@
   $range: 30
 );
 
+@use "scssVariables";
 @use "variables";
 @use "fonts";
 
@@ -54,4 +55,24 @@ h1 {
   font-size: 4.6rem;
   font-weight: normal;
   letter-spacing: -0.5px;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: scssVariables.$small) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: scssVariables.$medium) {
+  h2 {
+    font-size: 5rem;
+  }
 }

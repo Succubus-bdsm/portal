@@ -147,10 +147,16 @@ const teamMembers = [
   .page-title {
     text-transform: uppercase;
     position: relative;
-    font-size: 6rem;
+    font-size: 4rem;
     line-height: 1;
     width: 100%;
     word-spacing: 0.2em;
+  }
+
+  @media (min-width: scssVariables.$small) {
+    .page-title {
+      font-size: 6rem;
+    }
   }
 
   .page-title__second-word-first-letter {
@@ -171,14 +177,6 @@ const teamMembers = [
 
   section {
     text-align: center;
-  }
-
-  h2 {
-    font-family: var(--font-serif);
-    font-size: 4rem;
-    font-weight: normal;
-    line-height: 1em;
-    text-transform: uppercase;
   }
 
   .mission {
