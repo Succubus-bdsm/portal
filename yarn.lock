@@ -811,10 +811,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jogarcia/mgrid@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@jogarcia/mgrid@npm:1.0.2"
-  checksum: 1eefbb97c3f0c8c7cfc53732ff29f5c9e16b2a030f8f1184bcaed5fc9f2839bcc96d2d04468f87015fa0e164f98fd4702184ff8b1ad5eac8ef6c7533c9c3a253
+"@jogarcia/mgrid@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@jogarcia/mgrid@npm:1.1.0"
+  checksum: 9f99d60b94a1ded51346e20883ba775a30fd9109022663ed14b1bceab95cf0ccf64cda4a95f7a02059690e513b36c31594e988b7b492304ae2fca67cb6327564
   languageName: node
   linkType: hard
 
@@ -4384,7 +4384,7 @@ __metadata:
   dependencies:
     "@astrojs/alpinejs": ^0.4.0
     "@astrojs/sitemap": ^3.1.6
-    "@jogarcia/mgrid": ^1.0.2
+    "@jogarcia/mgrid": ^1.1.0
     "@types/alpinejs": ^3.13.10
     alpinejs: ^3.14.1
     astro: ^4.10.3
