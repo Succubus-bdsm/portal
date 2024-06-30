@@ -57,6 +57,21 @@ const optimizedSuccubusPapers = await getImage({
     text-align: center;
   }
 
+  .page-title {
+    text-transform: uppercase;
+    position: relative;
+    font-size: 4rem;
+    line-height: 1;
+    width: 100%;
+    word-spacing: 0.2em;
+  }
+
+  @media (min-width: scssVariables.$small) {
+    .page-title {
+      font-size: 6rem;
+    }
+  }
+
   .overlay {
     filter: brightness(80%) contrast(110%) saturate(80%) blur(2px)
       hue-rotate(0deg);
