@@ -13,7 +13,9 @@ const { teamMember } = Astro.props;
   <div class="socials gap-4">
     {
       teamMember.socials.map((social) => (
-        <Image src={social.src} alt={social.alt} width={31.2} height={31.2} />
+        <a href={social.href} target="_blank">
+          <Image src={social.src} alt={social.alt} width={31.2} height={31.2} />
+        </a>
       ))
     }
   </div>
