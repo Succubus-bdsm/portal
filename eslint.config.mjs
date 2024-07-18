@@ -1,7 +1,7 @@
-import pluginAstro from "eslint-plugin-astro";
-import pluginPrettier from "eslint-plugin-prettier";
+import eslintPluginAstro from "eslint-plugin-astro";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default [
-  pluginAstro.configs.recommended,
-  pluginPrettier.configs.recommended,
+  ...eslintPluginAstro.configs.recommended,
+  eslintPluginPrettierRecommended,
 ];
