@@ -1,5 +1,6 @@
 ---
 import BrandTitle from "@/components/BrandTitle.astro";
+import BrandSubtitle from "@/components/BrandSubtitle.astro";
 import Link from "@/components/Link.astro";
 
 import Button from "./Button.astro";
@@ -35,9 +36,7 @@ const { links } = Astro.props;
     </div>
 
     <BrandTitle />
-    <h2 class="hero__header-subtitle">
-      <i> Placeres ocultos </i>
-    </h2>
+    <BrandSubtitle />
 
     <img src="/images/separator.svg" alt="Separador" />
 
@@ -97,12 +96,5 @@ const { links } = Astro.props;
 
   .links-container--hidden {
     transform: translateX(100%);
-  }
-
-  .hero__header-subtitle > i {
-    font-weight: normal;
-    font-family: var(--font-sans-serif);
-    font-size: 1.4rem;
-    text-transform: initial;
   }
 </style>
