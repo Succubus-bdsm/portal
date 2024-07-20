@@ -16,7 +16,7 @@ import Poll from "@/components/home/Poll.astro";
   <Container>
     <header class="hero py-7">
       <BrandTitle class="hero__header" />
-      <BrandSubtitle />
+      <BrandSubtitle class="hero-header__subtitle" />
 
       <img src="/images/separator.svg" alt="" />
       <Button href="https://blog.succubus-bdsm.com/">Ir al Blog</Button>
@@ -80,9 +80,7 @@ import Poll from "@/components/home/Poll.astro";
     }
   }
 
-  @media (min-width: scssVariables.$small) {
-    .hero__header-subtitle > i {
-      font-size: 1.5rem;
-    }
+  .hero-header__subtitle {
+    z-index: 10;
   }
 </style>
