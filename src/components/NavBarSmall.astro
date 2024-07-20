@@ -1,4 +1,5 @@
 ---
+import BrandTitle from "@/components/BrandTitle.astro";
 import Link from "@/components/Link.astro";
 
 import Button from "./Button.astro";
@@ -33,8 +34,10 @@ const { links } = Astro.props;
       </Button>
     </div>
 
-    <h1>Suc<span>c</span>ubus</h1>
-    <h2>Placeres ocultos</h2>
+    <BrandTitle />
+    <h2 class="hero__header-subtitle">
+      <i> Placeres ocultos </i>
+    </h2>
 
     <img src="/images/separator.svg" alt="Separador" />
 
@@ -92,31 +95,14 @@ const { links } = Astro.props;
     }
   }
 
-  h1 {
-    text-transform: uppercase;
-    margin: 0;
-    text-align: center;
-    font-size: 5.2rem;
-    line-height: 70px;
-    padding: 0 2rem;
-    font-weight: 400;
-    margin-bottom: 0;
-
-    span {
-      color: var(--color-accent);
-    }
-  }
-
-  h2 {
-    margin: 0;
-    color: white;
-    font-family: var(--font-sans-serif);
-    font-size: 1.4rem;
-    font-style: italic;
-    font-weight: normal;
-  }
-
   .links-container--hidden {
     transform: translateX(100%);
+  }
+
+  .hero__header-subtitle > i {
+    font-weight: normal;
+    font-family: var(--font-sans-serif);
+    font-size: 1.4rem;
+    text-transform: initial;
   }
 </style>
