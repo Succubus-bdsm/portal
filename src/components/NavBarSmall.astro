@@ -35,12 +35,13 @@ const { links } = Astro.props;
       </Button>
     </div>
 
-    <BrandTitle />
-    <BrandSubtitle />
+    <BrandTitle tag="p" />
+    <BrandSubtitle tag="p" />
 
     <img src="/images/separator.svg" alt="Separador" />
 
     <ul>
+      <li>lol</li>
       {
         links.map((link) => (
           <li>
