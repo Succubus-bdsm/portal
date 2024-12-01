@@ -7,6 +7,12 @@ import purgecss from "astro-purgecss";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.succubus-bdsm.com",
-  integrations: [alpinejs(), sitemap(), purgecss()],
+  integrations: [
+    alpinejs(),
+    sitemap({
+      filter: (page) =>
+        page !== "https://www.succubus-bdsm.com/terminos-de-servicio/",
+    }),
+    purgecss(),
+  ],
 });
-
