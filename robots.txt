@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /terminos-de-servicio/
+Disallow: /portal/contactanos/ 
+Disallow: /portal/terminos-de-servicio/ 
