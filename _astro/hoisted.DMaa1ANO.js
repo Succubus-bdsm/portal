@@ -1,1 +1,0 @@
-import{m as t}from"./module.esm.C3DXG5zi.js";document.addEventListener("alpine:init",()=>{t.data("nav",()=>({isSmAndDown:!0,init(){const n=()=>{const i=window.innerWidth;this.isSmAndDown=i<768};window.matchMedia("(max-width: 768px)").addEventListener("change",n),n()}}))});
