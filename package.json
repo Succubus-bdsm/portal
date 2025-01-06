@@ -12,11 +12,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/sitemap": "^3.1.6",
     "@jogarcia/mgrid": "^1.1.0",
-    "@types/alpinejs": "^3.13.10",
-    "alpinejs": "^3.14.1",
     "astro": "^4.10.3",
     "astro-purgecss": "^4.1.1",
     "purgecss": "^6.0.0"

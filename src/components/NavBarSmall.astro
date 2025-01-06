@@ -8,8 +8,22 @@ import Button from "./Button.astro";
 const { links } = Astro.props;
 ---
 
-<div x-data="{ isMenuOpen: false }">
-  <div @click="isMenuOpen = true">
+<script>
+  const navMenuOpen = document.getElementById("nav-menu-open");
+  const navMenuClose = document.getElementById("nav-menu-close");
+  const linksContainer = document.getElementById("links-container");
+
+  navMenuOpen.addEventListener("click", () => {
+    linksContainer.classList.remove("links-container--hidden");
+  });
+
+  navMenuClose.addEventListener("click", () => {
+    linksContainer.classList.add("links-container--hidden");
+  });
+</script>
+
+<div>
+  <div id="nav-menu-open">
     <Button icon={true}>
       <img
         src="/images/menu.svg"
@@ -20,11 +34,8 @@ const { links } = Astro.props;
     </Button>
   </div>
 
-  <div
-    class="links-container"
-    :class="{ 'links-container--hidden': !isMenuOpen }"
-  >
-    <div @click="isMenuOpen = false">
+  <div id="links-container" class="links-container links-container--hidden">
+    <div id="nav-menu-close">
       <Button icon={true} class="close-button">
         <img
           src="/images/close.svg"

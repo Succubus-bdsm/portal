@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import alpinejs from "@astrojs/alpinejs";
 import sitemap from "@astrojs/sitemap";
 
 import purgecss from "astro-purgecss";
@@ -8,7 +7,6 @@ import purgecss from "astro-purgecss";
 export default defineConfig({
   site: "https://www.succubus-bdsm.com",
   integrations: [
-    alpinejs(),
     sitemap({
       filter: (page) =>
         page !== "https://www.succubus-bdsm.com/terminos-de-servicio/",

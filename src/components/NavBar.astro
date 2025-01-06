@@ -20,36 +20,39 @@ const links = [
 ---
 
 <script>
-  import Alpine from "alpinejs";
+  let navBarSmall = document.getElementById("navbar-small");
+  let navBarBig = document.getElementById("navbar-big");
 
-  document.addEventListener("alpine:init", () => {
-    Alpine.data("nav", () => ({
-      isSmAndDown: true,
-      init() {
-        const update = () => {
-          const width = window.innerWidth;
-          this.isSmAndDown = width < 768;
-        };
+  const update = () => {
+    const width = window.innerWidth;
 
-        const isSmAndDownListener = window.matchMedia("(max-width: 768px)");
-        isSmAndDownListener.addEventListener("change", update);
-        update();
-      },
-    }));
+    if (width < 768) {
+      navBarSmall.style.display = "block";
+      navBarBig.style.display = "none";
+    } else {
+      navBarSmall.style.display = "none";
+      navBarBig.style.display = "flex";
+    }
+  };
+
+  window.addEventListener("load", () => {
+    const isSmAndDownListener = window.matchMedia("(max-width: 768px)");
+    isSmAndDownListener.addEventListener("change", update);
+    update();
   });
 </script>
 
-<nav x-data="nav">
+<nav>
   <Container class="nav__container">
     <a href="/">
       <img src="/images/logo.svg" alt="Logo" class="nav__img" />
     </a>
 
-    <div x-show="isSmAndDown" class="ml-auto">
+    <div id="navbar-small" class="nav ml-auto">
       <NavBarSmall links={links} />
     </div>
 
-    <ul class="nav__links ml-auto" id="nav__links" x-show="!isSmAndDown">
+    <ul id="navbar-big" class="nav nav__links ml-auto" id="nav__links">
       {
         links.map((link) => (
           <li>
@@ -64,6 +67,10 @@ const links = [
 </nav>
 
 <style>
+  .nav {
+    display: none;
+  }
+
   .nav__container {
     display: flex;
     align-items: center;
