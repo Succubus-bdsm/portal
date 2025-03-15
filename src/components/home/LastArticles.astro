@@ -3,10 +3,16 @@ const key = "219991ba38c3a69c428f2db98f";
 
 const blogUrl = `https://blog.succubus-bdsm.com/ghost/api/content/posts/?key=${key}&limit=3&include=tags`;
 
-const res = await fetch(blogUrl);
-const data = await res.json();
+let data;
 
-const articles = data.posts;
+try {
+  const res = await fetch(blogUrl);
+  data = await res.json();
+} catch (error) {
+  console.log(error);
+}
+
+const articles = data?.posts ?? [];
 ---
 
 <section class="py-7">
