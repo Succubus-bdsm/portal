@@ -4,7 +4,7 @@ import Footer from "@/components/Footer.astro";
 
 import "@/styles/main.scss";
 
-const { title = "Inicio - Succubus" } = Astro.props;
+const { title = "Inicio - Succubus", noindex = false } = Astro.props;
 
 const metaValues = {
   description:
@@ -35,6 +35,8 @@ const metaValues = {
       property="og:image"
       content="https://www.succubus-bdsm.com/logo-full.png"
     />
+
+    {noindex && <meta name="robots" content="noindex" />}
 
     <title>{title}</title>
   </head>
