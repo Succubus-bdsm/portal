@@ -34,7 +34,9 @@ const articles = data?.posts ?? [];
               />
             </div>
             <div class="card--geo__tag">
-              <span class="post-card-primary-tag">{article.tags[0].name}</span>
+              <span class="post-card-primary-tag">
+                {article?.tags[0]?.name}
+              </span>
             </div>
             <div class="card--geo__body">
               <h3 class="card__title mb-1">{article.title}</h3>
